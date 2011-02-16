@@ -4,13 +4,14 @@ function Stack(/*layers*/) {
   Array.prototype.slice.call(arguments).reverse().forEach(function (layer) {
     var child = handle;
     handle = function (req, res) {
+      var self = this;
       try {
-        layer(req, res, function (err) {
-          if (err) { return error(req, res, err); }
-          child(req, res);
+        layer.call(this, req, res, function (err) {
+          if (err) { return error.call(self, req, res, err); }
+          child.call(self, req, res);
         });
       } catch (err) {
-        error(req, res, err);
+        error.call(this, req, res, err);
       }
     };
   });
