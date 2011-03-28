@@ -1,4 +1,20 @@
-# Stack
+# Stack2
+## Fork of 'Stack' with some added goodies that won't be included in the main repo.
+
+__Stack2__ is a fork of the original Stack module. This version includes some additional
+features that were decided not to be included upstream because they incur a slight
+performance penalty. The mainline "Stack" is designed to be used in cases where extreme
+performance is a requirement, "Stack2" may be used otherwise in order to:
+
+  * Maintain the original `this` of when the handler function is called throughout
+    all the layers. This is not a guarantee with the normal Stack.
+
+  * Have different/multiple error handlers for your various stack handlers. In addition
+    to setting `Stack.errorHandler`, you may also set `handler.errorHandler` as well,
+    where _handler_ is the result of a `Stack()` call.
+
+
+-------------------------------------------------------------------
 
 Stack is a minimal http module system for node.js.
 

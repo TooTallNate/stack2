@@ -1,14 +1,15 @@
 {
-  "name": "stack",
-  "description": "Stack is a minimal http module system for node.js",
-  "tags": ["connect", "middleware", "stack", "http"],
-  "version": "0.0.3",
+  "name": "stack2",
+  "description": "Fork of 'Stack' with some added goodies that won't be included in the main repo.",
+  "tags": ["connect", "middleware", "stack", "http", "stack2"],
+  "version": "2.0.3",
   "author": "Tim Caswell <tim@creationix.com>",
+  "maintainer": "Nathan Rajlich <nathan@tootallnate.net>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/creationix/stack.git"
+    "url": "git://github.com/TooTallNate/stack2.git"
   },
-  "bugs": "http://github.com/creationix/stack/issues",
+  "bugs": "https://github.com/TooTallNate/stack2/issues",
   "engines": ["node >= 0.2.0"],
   "main": "stack.js"
 }
