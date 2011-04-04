@@ -24,13 +24,13 @@ Basically it's the core idea of connect but in a standalone and super minimal st
 
 If you use npm, then install stack via npm.  Also, remember to put it as a dependency in your own project's package.json file.
 
-    npm install stack
+    npm install stack2
 
 If you don't use npm (Like you're on a phone), then simply copy the single file `stack.js` somewhere you can get to it.
 
 ## Example
 
-    http.createServer(require('stack')(
+    http.createServer(require('stack2')(
       require('loggerMiddleware')(),
       require('staticMiddleware')(root, mount),
       //...
